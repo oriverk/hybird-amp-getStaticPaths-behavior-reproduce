@@ -14,7 +14,7 @@ import PostType from '../../types/post'
 import { useAmp } from 'next/amp'
 
 export const config = {
-  amp: 'hybrid'
+  amp: true
 }
 
 type Props = {
