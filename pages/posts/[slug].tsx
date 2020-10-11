@@ -99,6 +99,6 @@ export async function getStaticPaths() {
         },
       }
     }),
-    fallback: false,
+    fallback: 'unstable_blocking',
   }
 }
