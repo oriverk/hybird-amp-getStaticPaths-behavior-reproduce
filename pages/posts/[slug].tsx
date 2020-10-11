@@ -11,6 +11,11 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import { useAmp } from 'next/amp'
+
+export const config = {
+  amp: 'hybrid'
+}
 
 type Props = {
   post: PostType
@@ -38,13 +43,13 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
+              {/* <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.content} /> */}
             </article>
           </>
         )}
